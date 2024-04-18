@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="truck_test">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.259760640474851 -0.467548720387372 0.335956230561003"
+        rpy="0 0 0" />
+      <mass
+        value="2.32505868943281" />
+      <inertia
+        ixx="0.014069019044393"
+        ixy="0.00161818326659359"
+        ixz="-1.94725722656981E-05"
+        iyy="0.0280830008441316"
+        iyz="-1.21068808202531E-05"
+        izz="0.0217029845912727" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="than_xe_Link">
+    <inertial>
+      <origin
+        xyz="0.18326177163538 0.0698508544255255 0.0403679615458223"
+        rpy="0 0 0" />
+      <mass
+        value="2.32505868943281" />
+      <inertia
+        ixx="0.014069019044393"
+        ixy="-1.94725722656979E-05"
+        ixz="-0.00161818326659359"
+        iyy="0.0217029845912727"
+        iyz="1.21068808202522E-05"
+        izz="0.0280830008441316" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/than_xe_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/than_xe_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thanxe_joint"
+    type="fixed">
+    <origin
+      xyz="0.0764988688394709 -0.427180758841549 0.266105376135478"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="than_xe_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="truoc_trai_Link">
+    <inertial>
+      <origin
+        xyz="0.013490381079065 0.0226167812290494 0.0326361455051495"
+        rpy="0 0 0" />
+      <mass
+        value="0.00329059193962959" />
+      <inertia
+        ixx="3.32152558237076E-07"
+        ixy="-3.50498986120487E-08"
+        ixz="-2.06512832188807E-08"
+        iyy="1.52774520460725E-07"
+        iyz="-2.40654597280753E-08"
+        izz="4.20844978468863E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/truoc_trai_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/truoc_trai_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="truoc_trai_joint"
+    type="revolute">
+    <origin
+      xyz="0.30047 0.16652 -0.092787"
+      rpy="0 0 -3.105" />
+    <parent
+      link="than_xe_Link" />
+    <child
+      link="truoc_trai_Link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="banh_truoc1_Link">
+    <inertial>
+      <origin
+        xyz="-7.38923191212493E-06 3.72637425556377E-05 -0.00295106641677401"
+        rpy="0 0 0" />
+      <mass
+        value="0.0980742688627906" />
+      <inertia
+        ixx="6.03131489550769E-05"
+        ixy="-3.01897083348276E-11"
+        ixz="1.08103027895803E-11"
+        iyy="6.03131489694687E-05"
+        iyz="-2.86861081346971E-12"
+        izz="0.000114178379145237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/banh_truoc1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/banh_truoc1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="banh_truoc1_joint"
+    type="continuous">
+    <origin
+      xyz="0.012439 0 0.031801"
+      rpy="1.5708 0.37263 -3.1416" />
+    <parent
+      link="truoc_trai_Link" />
+    <child
+      link="banh_truoc1_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="don_ngang_Link">
+    <inertial>
+      <origin
+        xyz="0.0502009199097646 0.0628359310057351 0.0872090978337698"
+        rpy="0 0 0" />
+      <mass
+        value="0.00155415624671255" />
+      <inertia
+        ixx="3.84464235337684E-09"
+        ixy="3.82383625198244E-21"
+        ixz="-1.38467926816846E-22"
+        iyy="1.87407475055403E-06"
+        iyz="-2.69741837890162E-23"
+        izz="1.87656383189001E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/don_ngang_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/don_ngang_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="don_ngang_joint"
+    type="revolute">
+    <origin
+      xyz="-0.031378 0.048592 0.12797"
+      rpy="3.1416 0 1.5296" />
+    <parent
+      link="truoc_trai_Link" />
+    <child
+      link="don_ngang_Link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="truoc_phai_Link">
+    <inertial>
+      <origin
+        xyz="0.000567069503805084 0.0345795818110656 -0.0531874787071282"
+        rpy="0 0 0" />
+      <mass
+        value="0.00460249007660857" />
+      <inertia
+        ixx="2.17921636822645E-06"
+        ixy="2.65600242282464E-08"
+        ixz="2.31272254873978E-08"
+        iyy="2.25073662129827E-06"
+        iyz="1.86546413725398E-08"
+        izz="1.29579648445004E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/truoc_phai_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/truoc_phai_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="truoc_phai_joint"
+    type="revolute">
+    <origin
+      xyz="0.28334 -0.032724 -0.092073"
+      rpy="1.5708 0 0.036063" />
+    <parent
+      link="than_xe_Link" />
+    <child
+      link="truoc_phai_Link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="banh_truoc2_Link">
+    <inertial>
+      <origin
+        xyz="-7.38898232466312E-06 3.72637288880706E-05 0.00319597779955105"
+        rpy="0 0 0" />
+      <mass
+        value="0.0980742666758258" />
+      <inertia
+        ixx="6.03131482537995E-05"
+        ixy="-3.01912634568255E-11"
+        ixz="1.1019330032679E-11"
+        iyy="6.03131482504292E-05"
+        iyz="-2.88122273089522E-12"
+        izz="0.000114178377999313" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/banh_truoc2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/banh_truoc2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="banh_truoc2_joint"
+    type="continuous">
+    <origin
+      xyz="0.0072289 0.031087 0"
+      rpy="-3.1416 0 -0.06201" />
+    <parent
+      link="truoc_phai_Link" />
+    <child
+      link="banh_truoc2_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="don_ngang2_Link">
+    <inertial>
+      <origin
+        xyz="0.0502009199099638 0.0628359310054007 0.0872090978337698"
+        rpy="0 0 0" />
+      <mass
+        value="0.00155415624671255" />
+      <inertia
+        ixx="3.84464235337684E-09"
+        ixy="3.82383786756957E-21"
+        ixz="-1.39114862817977E-22"
+        iyy="1.87407475055402E-06"
+        iyz="-2.69454356908742E-23"
+        izz="1.87656383189E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/don_ngang2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/don_ngang2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="don_ngang2_joint"
+    type="revolute">
+    <origin
+      xyz="0.055707 0.12726 -0.14992"
+      rpy="-1.5708 -1.5302 -3.1416" />
+    <parent
+      link="truoc_phai_Link" />
+    <child
+      link="don_ngang2_Link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="banh_sau1_Link">
+    <inertial>
+      <origin
+        xyz="-7.49768197895462E-06 -1.11022302462516E-16 -0.0239620516410381"
+        rpy="0 0 0" />
+      <mass
+        value="0.193306713115273" />
+      <inertia
+        ixx="0.000120490751859517"
+        ixy="2.40557357020221E-19"
+        ixz="-5.16540204946706E-13"
+        iyy="0.000120490751863662"
+        iyz="-5.76504414756025E-12"
+        izz="0.000228105291957227" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/banh_sau1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/banh_sau1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="banh_sau1_joint"
+    type="continuous">
+    <origin
+      xyz="0.029196 0.13123 -0.060485"
+      rpy="1.5708 0.61288 0" />
+    <parent
+      link="than_xe_Link" />
+    <child
+      link="banh_sau1_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="banh_sau2_Link">
+    <inertial>
+      <origin
+        xyz="-7.49789550436031E-06 -2.77555756156289E-16 -0.0154525872924146"
+        rpy="0 0 0" />
+      <mass
+        value="0.193306715705177" />
+      <inertia
+        ixx="0.000120490752985972"
+        ixy="-1.27393755267047E-18"
+        ixz="-3.78195081290541E-15"
+        iyy="0.000120490752990143"
+        iyz="-5.76504461218811E-12"
+        izz="0.000228105293583605" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/banh_sau2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://truck_test/meshes/banh_sau2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="banh_sau2_joint"
+    type="continuous">
+    <origin
+      xyz="0.029196 0 -0.060485"
+      rpy="1.5708 1.2032 3.1416" />
+    <parent
+      link="than_xe_Link" />
+    <child
+      link="banh_sau2_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
